@@ -26,4 +26,8 @@ pkgs.stdenv.mkDerivation rec {
     wrapProgram ${placeholder "out"}/bin/${name} \
       --prefix PATH : ${pkgs.lib.makeBinPath [pkgs.dbus]}
   '';
+
+  meta = {
+    mainProgram = "spotify-dbus";
+  };
 }
