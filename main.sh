@@ -50,7 +50,7 @@ main() {
         position=$(get_raw_position)
 
         x="1000000"
-        new_position=$(node -e "console.log(($position / $x - 5) * $x)")
+        new_position=$(((position / x - 5) * x))
 
         set_position "$new_position"
         ;;
@@ -59,7 +59,7 @@ main() {
         position=$(get_raw_position)
 
         x="1000000"
-        new_position=$(node -e "console.log(($position / $x + 5) * $x)")
+        new_position=$(((position / x + 5) * x))
 
         set_position "$new_position"
         ;;
